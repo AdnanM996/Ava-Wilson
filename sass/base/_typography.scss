@@ -13,6 +13,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-primary;
     font-weight: 500;
+    text-transform: capitalize;
 }
 
 h1 { font-size: 2em; }
@@ -21,3 +22,70 @@ h3 { font-size: 1.17em; }
 h4 { font-size: 1em; }
 h5 { font-size: .83em; }
 h6 { font-size: .67em; }
+
+.logo {
+    background-color: $grey-medium;
+    padding: 2.5rem;
+    font-size: 2.4rem;
+    color: $dark;
+    font-family: $font-secondary;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hero {
+    &--heading {
+        font-family: $font-secondary;
+        font-size: 5.6rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 7.5rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.visible__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0rem;
+    cursor: pointer;
+}
+
+.plus {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    cursor: pointer;
+
+    &--line--1 {
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0%;
+        background-color: $dark;
+    }
+
+    &--line--2 {
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0%;
+        background-color: $dark;
+        transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transform-origin: center;
+    }
+
+    &:hover .plus--line--2 {
+        height: 0%;
+    }
+}

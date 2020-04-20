@@ -1,0 +1,64 @@
+.nav {
+    display: flex;
+
+    & ul {
+        list-style: none;
+        display: flex;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    & li {
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+    }
+
+    & a {
+        display: block;
+        color: $dark;
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+
+    &--link {
+        position: relative;
+        overflow: hidden;
+        line-height: 180%;
+
+        &::before,
+        &::after {
+            bottom: 0%;
+            height: 2px;
+            width: 0%;
+            background-color: $dark;
+            transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+
+        &::before {
+            left: 50%;
+        }
+
+        &::after {
+            right: 50%;
+        }
+
+        &:hover::after, 
+        &:hover::before {
+            width: 50%;
+        }
+    }
+
+    &--social {
+        transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        line-height: 180%;
+
+        &:hover {
+            transform: rotateX(360deg);
+        }
+    }
+}

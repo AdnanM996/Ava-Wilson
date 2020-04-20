@@ -1,0 +1,74 @@
+.hero {
+    height: 100%;
+    width: 100%;
+}
+
+.home {
+    
+    &-about {
+        background-color: $grey-light;
+        padding: 10rem 0rem;
+
+        & .wrapper {
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 6rem;
+        }
+
+        &__text {
+            margin-bottom: 5rem;
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+    }
+
+    &-projects {
+        padding: 10rem 0rem;
+
+        & .wrapper {
+            justify-content: center;
+        }
+    }
+
+    &-services {
+        padding: 10rem 0rem;
+
+        & .wrapper {
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        & .container {
+            margin: 10rem 0rem;
+            width: 100%;
+        }
+
+        &__item {
+            padding: 3rem 0rem;
+            border-bottom: 2px solid $grey-light; 
+        }
+    }
+}
+
+//to typography
+.name {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-bottom: 5rem;
+
+    & P {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}

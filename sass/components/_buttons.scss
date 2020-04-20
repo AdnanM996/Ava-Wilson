@@ -1,0 +1,15 @@
+.cta {
+    color: $dark;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 1.2rem 5rem;
+    border: 1px solid $dark;
+    transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+    &:hover {
+        background-color: $dark;
+        color: $white;
+    }
+}
