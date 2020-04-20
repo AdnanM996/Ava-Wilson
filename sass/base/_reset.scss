@@ -1,0 +1,29 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $white;
+    color: $dark;
+}
+
+.wrapper {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 1600px;
+}
