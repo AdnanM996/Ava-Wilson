@@ -80,3 +80,16 @@
         }
     }    
 }
+
+.instagram {
+    & .grid {
+        grid-template-columns: repeat(4, 1fr);
+        height: 35rem;
+        gap: 2.5rem;
+        margin-top: 10rem;
+
+        &__item a img{
+            object-fit: cover;
+        }
+    }
+}

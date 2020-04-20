@@ -85,14 +85,20 @@ h6 {
   align-items: center;
   padding: 2rem 0rem;
   cursor: pointer; }
+  .visible__text:hover .plus--line--2 {
+    height: 0%; }
 
 .plus {
   height: 1.5rem;
   width: 1.5rem;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  /*&:hover .plus--line--2 {
+        height: 0%;
+    }*/ }
   .plus--line--1 {
     height: 1px;
+    max-height: 1px;
     width: 100%;
     position: absolute;
     top: 50%;
@@ -102,6 +108,7 @@ h6 {
   .plus--line--2 {
     height: 100%;
     width: 1px;
+    max-width: 1px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -109,8 +116,35 @@ h6 {
     background-color: #242424;
     transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transform-origin: center; }
-  .plus:hover .plus--line--2 {
-    height: 0%; }
+
+.hidden--text {
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+
+.visible__text:hover ~ .hidden--text {
+  height: 20px;
+  opacity: 1; }
+
+.link {
+  color: #242424;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 120%;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 2; }
+  .link::after {
+    left: 0%;
+    bottom: 0%;
+    height: 7px;
+    width: 100%;
+    z-index: -1; }
+  .link--grey::after {
+    background-color: #ddd; }
+  .link--white::after {
+    background-color: #fff; }
 
 .cta {
   color: #242424;
@@ -124,6 +158,32 @@ h6 {
   .cta:hover {
     background-color: #242424;
     color: #fff; }
+
+.footer {
+  background-color: #242424;
+  color: #fff;
+  padding: 7.5rem 0rem;
+  position: sticky;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -1; }
+  .footer .wrapper {
+    justify-content: space-between;
+    align-items: flex-start; }
+  .footer ul {
+    list-style: none; }
+  .footer li:not(:last-child) {
+    margin-bottom: 1.2rem; }
+  .footer a {
+    color: #fff;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-decoration: none; }
+    .footer a:hover {
+      text-decoration: underline; }
 
 .grid {
   display: grid;
@@ -180,6 +240,14 @@ h6 {
       grid-row: 4 / 5;
       background-image: url(../../images/relizedproject4.jpg); }
 
+.instagram .grid {
+  grid-template-columns: repeat(4, 1fr);
+  height: 35rem;
+  gap: 2.5rem;
+  margin-top: 10rem; }
+  .instagram .grid__item a img {
+    object-fit: cover; }
+
 .header {
   padding: 4.5rem 0rem;
   width: 100%;
@@ -195,7 +263,8 @@ h6 {
     display: none; }
 
 .nav {
-  display: flex; }
+  display: flex;
+  align-items: center; }
   .nav ul {
     list-style: none;
     display: flex; }
@@ -228,11 +297,17 @@ h6 {
       width: 50%; }
   .nav--social {
     transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    line-height: 180%; }
-    .nav--social:hover {
-      transform: rotateX(360deg); }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nav--social:not(:last-child) {
+      margin-right: 2.5rem; }
+    .nav--social i {
+      display: block;
+      margin-top: -7px; }
 
 .hero {
+  background-color: #fff;
   height: 100%;
   width: 100%; }
 
@@ -255,11 +330,13 @@ h6 {
     font-weight: 300; }
 
 .home-projects {
+  background-color: #fff;
   padding: 10rem 0rem; }
   .home-projects .wrapper {
     justify-content: center; }
 
 .home-services {
+  background-color: #fff;
   padding: 10rem 0rem; }
   .home-services .wrapper {
     justify-content: space-between;
@@ -270,7 +347,15 @@ h6 {
     width: 100%; }
   .home-services__item {
     padding: 3rem 0rem;
-    border-bottom: 2px solid #f2f2f2; }
+    border-bottom: 2px solid #f2f2f2;
+    overflow: hidden; }
+
+.instagram {
+  background-color: #fff;
+  padding: 10rem 0rem; }
+  .instagram .wrapper {
+    justify-content: space-between;
+    align-items: center; }
 
 .name {
   font-size: 1.6rem;
@@ -279,3 +364,22 @@ h6 {
   margin-bottom: 5rem; }
   .name P:not(:last-child) {
     margin-bottom: 1rem; }
+
+.questions {
+  background-color: #fff;
+  padding: 10rem 0rem; }
+  .questions__text {
+    margin-top: 10rem;
+    padding: 7.5rem 0rem;
+    background-color: #f2f2f2; }
+    .questions__text .wrapper {
+      display: grid;
+      width: 120rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20rem;
+      margin: 0 auto;
+      align-items: center; }
+  .questions__item p {
+    line-height: 160%;
+    font-weight: 300;
+    font-size: 1.8rem; }

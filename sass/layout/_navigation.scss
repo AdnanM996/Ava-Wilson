@@ -1,5 +1,6 @@
 .nav {
     display: flex;
+    align-items: center;
 
     & ul {
         list-style: none;
@@ -55,10 +56,17 @@
 
     &--social {
         transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-        line-height: 180%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &:hover {
-            transform: rotateX(360deg);
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+
+        & i {
+            display: block;
+            margin-top: -7px;
         }
     }
 }
