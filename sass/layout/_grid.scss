@@ -25,7 +25,7 @@
             &--2 {
                 grid-column: 4 / -1;
                 grid-row: 1 / -1;
-                background-image: url(../../images/hero.jpg);
+                background-image: url(../images/hero.jpg);
                 background-attachment: fixed;
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -56,25 +56,25 @@
                 &--1 {
                     grid-column: 1 / 2;
                     grid-row: 1 / 2;
-                    background-image: url(../../images/relizedproject1.jpg);
+                    background-image: url(../images/relizedproject1.jpg);
                 }
 
                 &--2 {
                     grid-column: 2 / 3;
                     grid-row: 2 / 3;
-                    background-image: url(../../images/relizedproject2.jpg);
+                    background-image: url(../images/relizedproject2.jpg);
                 }
 
                 &--3 {
                     grid-column: 1 / 2;
                     grid-row: 3 / 4;
-                    background-image: url(../../images/relizedproject3.jpg);
+                    background-image: url(../images/relizedproject3.jpg);
                 }
 
                 &--4 {
                     grid-column: 2 / 3;
                     grid-row: 4 / 5;
-                    background-image: url(../../images/relizedproject4.jpg);
+                    background-image: url(../images/relizedproject4.jpg);
                 }
             }
         }
