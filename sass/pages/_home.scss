@@ -2,6 +2,7 @@
     background-color: $white;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .home {
@@ -113,4 +114,10 @@
             font-size: 1.8rem;
         }
     }
+}
+
+.intro-animation__img {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }

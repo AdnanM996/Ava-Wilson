@@ -137,3 +137,29 @@ h6 { font-size: .67em; }
         }
     }
 }
+
+.intro-animation {
+    transition: all 2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation: intro-text 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    opacity: 0;
+    transform: translateY(25%);
+
+    &:nth-child(2n) {
+        animation-delay: 1s;
+    }
+}
+
+@keyframes intro-text {
+    0% {
+        transform: translateY(25%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
