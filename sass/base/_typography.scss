@@ -14,6 +14,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $font-primary;
     font-weight: 500;
     text-transform: capitalize;
+    line-height: 180%;
+}
+
+h1, h2 {
+    margin-bottom: 5rem;
+}
+
+h3, h4 {
+    margin-bottom: 3.5rem;
+}
+
+h5, h6 {
+    margin-bottom: 2.5rem;
 }
 
 h1 { font-size: 2em; }
@@ -161,5 +174,14 @@ h6 { font-size: .67em; }
     100% {
         transform: translateY(0%);
         opacity: 1;
+    }
+}
+
+.projects{
+    &__text {
+        width: 50%;
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 160%;
     }
 }

@@ -1,0 +1,11 @@
+.projects {
+    background-color: $white;
+    padding: 10rem 0rem;
+
+    & .wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 8.6rem;
+    }
+}

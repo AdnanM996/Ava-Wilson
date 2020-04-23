@@ -1,6 +1,8 @@
 .grid {
     display: grid;
     width: 100%;
+    max-width: 1600px;
+    margin: 10rem auto;
 }
 
 .hero {
@@ -90,6 +92,21 @@
 
         &__item a img{
             object-fit: cover;
+        }
+    }
+}
+
+.projects {
+    & .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+
+        &__item {
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
