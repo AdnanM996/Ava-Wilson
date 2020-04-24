@@ -1,0 +1,37 @@
+.contact {
+    background-color: $white;
+    padding: 10rem 0rem;
+    margin-top: 8.6rem;
+
+    & .wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &__area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__item {
+        display: inline;
+
+        &:first-child {
+            width: 50%;
+        }
+    }
+
+    &-form {
+        background-color: $white;
+        padding: 10rem 0rem;
+
+    }
+}
+
+.social-networks {
+    padding: 10rem 0rem;
+    background-color: $grey-light;
+}

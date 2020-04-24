@@ -2,7 +2,7 @@
     display: grid;
     width: 100%;
     max-width: 1600px;
-    margin: 10rem auto;
+    //margin: 10rem auto;
 }
 
 .hero {
@@ -108,5 +108,27 @@
                 object-fit: cover;
             }
         }
+    }
+}
+
+.social-networks {
+    & .grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        &__item {
+            &:last-child {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.contact-form {
+    & .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10rem;
     }
 }
