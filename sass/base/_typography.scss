@@ -62,6 +62,13 @@ h6 { font-size: .67em; }
     }
 }
 
+.home-services {
+    & h2 {
+        line-height: 0;
+        margin-bottom: 2.5rem;
+    }
+}
+
 .visible__text {
     display: flex;
     justify-content: space-between;
@@ -105,7 +112,7 @@ h6 { font-size: .67em; }
     }
 
     /*&:hover .plus--line--2 {
-        height: 0%;
+        opacity: 0;
     }*/
 }
 
