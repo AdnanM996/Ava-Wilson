@@ -1,0 +1,22 @@
+.about {
+    background-color: $white;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.work-approach {
+    background-color: $white;
+    padding: 10rem 0rem;
+    margin-top: 10rem;
+
+    & .wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
