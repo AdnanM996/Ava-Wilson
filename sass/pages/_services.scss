@@ -9,4 +9,9 @@
         flex-direction: column;
         height: 100%;
     }
+
+    &__details {
+        background-color: $white;
+        padding: 10rem 0rem;
+    }
 }

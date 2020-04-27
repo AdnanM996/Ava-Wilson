@@ -193,6 +193,42 @@
     }
 }
 
+.services {
+    &__details {
+        & .grid {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 7.5rem;
+            row-gap: 10rem;
+
+            &__item {
+                height: 75rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+
+                &--bg {
+                    background-image: url(../../images/servicesbg.jpg);
+                    background-attachment: fixed;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+                    & img {
+                        display: inline-block;
+                        height: 95%;
+                        width: 95%;
+                        position: absolute;
+                        bottom: -2.5rem;
+                        right: -2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .about {
     & .grid {
         grid-template-columns: 40% 10% 10% 40%;
