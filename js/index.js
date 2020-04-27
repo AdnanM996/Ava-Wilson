@@ -18,4 +18,14 @@ window.addEventListener('load', ()=> {
     img.style.opacity = '1';
 });
 
+window.addEventListener('scroll', () => {
+    let wScroll = window.pageYOffset;
+    const couch = document.querySelector('.couch');
+    const heroText = document.querySelector('.hero--text');
+
+    couch.style.backgroundPositionY = (-wScroll / 4) + '%';
+    heroText.style.transform = `translateY(-${(wScroll / 5) + '%'})`;
+
+});
+
 
