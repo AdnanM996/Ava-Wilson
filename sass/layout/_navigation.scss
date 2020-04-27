@@ -1,14 +1,18 @@
 .nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     & ul {
         list-style: none;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         &:not(:last-child) {
             margin-right: 5rem;
         }
+
     }
 
     & li {
@@ -18,8 +22,8 @@
     }
 
     & a {
-        display: block;
         color: $dark;
+        display: block;
         font-size: 1.8rem;
         font-weight: 400;
         text-decoration: none;
@@ -57,16 +61,22 @@
     &--social {
         transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
         &:not(:last-child) {
             margin-right: 2.5rem;
         }
 
-        & i {
+        & a {
             display: block;
-            margin-top: -7px;
+            line-height: 0;
+            & i {
+                margin-bottom: 0;
+                height: 2.5rem;
+                width: 2.5rem;
+                font-size: 2.5rem;
+            }
         }
     }
 }

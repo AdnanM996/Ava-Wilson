@@ -1,11 +1,13 @@
 .projects {
     background-color: $white;
     padding: 10rem 0rem;
+    height: 100%;
 
     & .wrapper {
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
         flex-direction: column;
         margin-top: 8.6rem;
+        height: 100%;
     }
 }

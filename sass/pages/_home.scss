@@ -74,20 +74,6 @@
     }
 }
 
-//to typography
-.name {
-    font-size: 1.6rem;
-    font-weight: 300;
-    text-transform: capitalize;
-    margin-bottom: 5rem;
-
-    & P {
-        &:not(:last-child) {
-            margin-bottom: 1rem;
-        }
-    }
-}
-
 .questions {
     background-color: $white;
     padding-top: 10rem;
@@ -99,7 +85,6 @@
 
         & .wrapper {
             display: grid;
-            width: 120rem;
             grid-template-columns: repeat(2, 1fr);
             gap: 20rem;
             margin: 0 auto;

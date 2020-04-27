@@ -105,7 +105,8 @@
     }
 }
 
-.projects {
+.projects-grid {
+    background-color: $white;
     & .grid {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 10rem;
@@ -114,7 +115,47 @@
         &__item {
             height: 70rem;
             width: 100%;
-            border: 2px solid salmon;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                left: 0%;
+                top: 0%;
+                right: 0%;
+                bottom: 0%;
+                height: 100%;
+                width: 100%;
+                background-color: rgba($dark, .35);
+                z-index: 2;
+                opacity: 0;
+                transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+
+            &--bottom {
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                z-index: 3;
+                padding: 2.5rem 5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                & h4 {
+                  display: inline-block;
+                  line-height: 0;
+                  margin-bottom: 0;
+                  color: $white;
+                  font-size: 2.8rem;
+                  font-weight: 300;
+                }
+            }
+
             & img {
                 height: 100%;
                 width: 100%;
