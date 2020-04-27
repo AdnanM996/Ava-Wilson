@@ -1,0 +1,12 @@
+.services {
+    background-color: $white;
+    height: 100%;
+    padding: 10rem 0rem;
+
+    & .wrapper {
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 100%;
+    }
+}

@@ -263,6 +263,9 @@ p {
   font-weight: 400;
   color: rgba(36, 36, 36, 0.8); }
 
+.text__area {
+  width: 50%; }
+
 .cta {
   color: #242424;
   font-size: 1.5rem;
@@ -723,4 +726,14 @@ input[type="text"] {
     align-items: flex-start;
     flex-direction: column;
     margin-top: 8.6rem;
+    height: 100%; }
+
+.services {
+  background-color: #fff;
+  height: 100%;
+  padding: 10rem 0rem; }
+  .services .wrapper {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     height: 100%; }
