@@ -67,22 +67,22 @@ h5, h6 {
   margin-bottom: 2.5rem; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 3em; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 2.5em; }
 
 h3 {
-  font-size: 1.17em; }
+  font-size: 2em; }
 
 h4 {
-  font-size: 1em; }
+  font-size: 1.5em; }
 
 h5 {
-  font-size: .83em; }
+  font-size: 1.17em; }
 
 h6 {
-  font-size: .67em; }
+  font-size: 1em; }
 
 .big--heading {
   font-size: 8rem;
@@ -734,7 +734,7 @@ input[type="text"] {
   background-color: #fff;
   padding: 10rem 0rem; }
   .home-projects .wrapper {
-    justify-content: center; }
+    justify-content: flex-start; }
 
 .home-services {
   background-color: #fff;
