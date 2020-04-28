@@ -277,3 +277,11 @@ p {
 .text__area {
     width: 50%;
 }
+
+.about__text {
+    & p {
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+}

@@ -266,6 +266,9 @@ p {
 .text__area {
   width: 50%; }
 
+.about__text p:not(:last-child) {
+  margin-bottom: 5rem; }
+
 .cta {
   color: #242424;
   font-size: 1.5rem;
@@ -290,7 +293,7 @@ p {
   padding: 1.2rem 5rem;
   border: 1px solid #242424;
   transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
-  margin-right: 5rem; }
+  margin-right: 3.5rem; }
   .btn:hover {
     background-color: #242424;
     color: #fff; }
@@ -340,8 +343,7 @@ p {
     margin-bottom: 3.5rem; }
   .form__bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     width: 100%; }
 
 input[type="text"],
@@ -357,15 +359,29 @@ textarea {
   font-weight: 400;
   outline-width: 0;
   padding: 1rem .5rem;
-  width: 100%; }
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715); }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-bottom: 2px solid #242424; }
+    input[type="text"]:focus::placeholder,
+    input[type="email"]:focus::placeholder,
+    textarea:focus::placeholder {
+      transform: translateY(-50%);
+      opacity: 0; }
 
 input[type="text"] {
   margin-right: 5rem; }
 
+::placeholder {
+  transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715); }
+
 .grid {
   display: grid;
   width: 100%;
-  max-width: 1600px; }
+  max-width: 1600px;
+  margin: 0 auto; }
 
 .hero .grid {
   grid-template-columns: repeat(12, 1fr);
@@ -630,16 +646,38 @@ input[type="text"] {
 .work-approach {
   background-color: #fff;
   padding: 10rem 0rem;
-  margin-top: 10rem; }
+  margin-top: 20rem; }
   .work-approach .wrapper {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column; }
   .work-approach .container {
-    width: 100%;
+    width: 50%;
+    display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 7.5rem 0rem; }
+  .work-approach ul {
+    list-style: none;
+    display: inline-block; }
+  .work-approach li {
+    font-size: 1.8rem;
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+    color: rgba(36, 36, 36, 0.7);
+    padding-left: 5rem; }
+    .work-approach li:not(:last-child) {
+      margin-bottom: 1.8rem; }
+    .work-approach li::after {
+      left: 0%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1rem;
+      height: 2px;
+      background-color: rgba(36, 36, 36, 0.7); }
+  .work-approach__item:not(:last-child) {
+    margin-right: 20rem; }
 
 .contact {
   background-color: #fff;

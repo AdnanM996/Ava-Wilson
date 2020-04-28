@@ -19,8 +19,7 @@
 
     &__bottom {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         width: 100%;
     }
 }
@@ -39,8 +38,22 @@ textarea {
     outline-width: 0;
     padding: 1rem .5rem;
     width: 100%;
+    transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+    &:focus {
+        border-bottom: 2px solid $dark;
+
+        &::placeholder {
+            transform: translateY(-50%);
+            opacity: 0;
+        }
+    }
 }
 
 input[type="text"] {
     margin-right: 5rem;
+}
+
+::placeholder {
+    transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
