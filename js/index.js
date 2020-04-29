@@ -28,4 +28,27 @@ window.addEventListener('scroll', () => {
 
 });
 
+const header = document.querySelector('.header');
+const logo = document.querySelector('.logo');
+
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 20) {
+        header.style.padding = '20px 0px';
+        header.style.backgroundColor = '#ffffff';
+        header.style.transition = 'all .3s ease';
+
+        logo.style.padding = '10px';
+        logo.style.fontSize = '16px';
+        logo.style.transition = 'all .3s ease';
+    } else {
+        header.style.padding = '50px 0px';
+        header.style.backgroundColor = 'transparent';
+        header.style.transition = 'all .3s ease';
+
+        logo.style.padding = '25px';
+        logo.style.fontSize = '24px';
+        logo.style.transition = 'all .3s ease';
+    }
+});
+
 

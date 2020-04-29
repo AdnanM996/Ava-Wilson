@@ -16,6 +16,10 @@
     & .wrapper {
         justify-content: space-between;
         align-items: flex-start;
+
+        @media only screen and(max-width: $media-small) {
+            flex-direction: column;
+        }
     }
 
     & ul {
@@ -38,6 +42,14 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+
+    &__item {
+        @media only screen and(max-width: $media-small) {
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
         }
     }
 }

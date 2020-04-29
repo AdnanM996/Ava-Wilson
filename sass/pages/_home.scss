@@ -71,6 +71,11 @@
     & .wrapper {
         justify-content: space-between;
         align-items: center;
+
+        @media only screen and(max-width: $media-small) {
+            flex-direction: column;
+            align-items: flex-start;
+        } 
     }
 }
 
@@ -89,6 +94,10 @@
             gap: 20rem;
             margin: 0 auto;
             align-items: center;
+
+            @media only screen and(max-width: $media-small) {
+                grid-template-columns: 1fr;
+            }
         }
     }
 
