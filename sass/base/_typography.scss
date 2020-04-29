@@ -289,3 +289,9 @@ p {
         }
     }
 }
+
+.box {
+    &__text {
+        margin-bottom: 5rem;
+    }
+}

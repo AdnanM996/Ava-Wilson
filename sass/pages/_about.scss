@@ -12,11 +12,10 @@
 
 .work-approach {
     background-color: $white;
-    padding: 10rem 0rem;
-    margin-top: 20rem;
+    padding: 20rem 0rem 10rem 0rem;
 
     @media only screen and(max-width: $media-small) {
-        margin-top: 0;
+        padding: 10rem 0rem;
     }
 
     & .wrapper {
