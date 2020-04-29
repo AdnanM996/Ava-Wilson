@@ -4,6 +4,14 @@
     align-items: flex-start;
     flex-direction: column;
 
+    & .wrapper {
+        @media only screen and(max-width: $media-small) {
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
     &__top {
         display: flex;
         justify-content: space-between;

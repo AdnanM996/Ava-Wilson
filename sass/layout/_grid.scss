@@ -211,12 +211,22 @@
     & .grid {
         grid-template-columns: repeat(2, 1fr);
 
+        @media only screen and(max-width: $media-small) {
+            grid-template-columns: 1fr;
+        }
+
         &__item {
             &:last-child {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
                 flex-direction: column;
+            }
+
+            @media only screen and(max-width: $media-small) {
+                &:not(:last-child) {
+                    margin-bottom: 5rem;
+                }
             }
         }
     }
@@ -302,5 +312,9 @@
     & .grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10rem;
+
+        @media only screen and(max-width: $media-small) {
+            grid-template-columns: 1fr;
+        }
     }
 }
