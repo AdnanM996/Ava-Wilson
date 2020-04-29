@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <title>Ava Wilson - Interior Designer</title>
 </head>
-<body>
+<body id="home">
     <section class="loader"></section>
     <header class="header">
         <div class="wrapper">
@@ -62,17 +62,17 @@
 
     <section class="home-about">
         <div class="wrapper">
-            <h1 class="home-about--heading">I provide a full range of services in the field of interior design and furniture business.</h1>
+            <h1 class="home-about--heading" id="home-heading" style="transform: translateY(100%); opacity: 0;">I provide a full range of services in the field of interior design and furniture business.</h1>
 
             <div class="home-about__item">
 
                 <div class="name">
-                    <p>ava wilson</p>
-                    <p>interior designer</p>
+                    <p style="opacity: 0;">ava wilson</p>
+                    <p style="opacity: 0;">interior designer</p>
                 </div>
 
                 <div class="home-about__text">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, neque aliquid corrupti recusandae officiis laudantium id? Sequi delectus reiciendis incidunt laboriosam aliquam cum repudiandae esse, eos totam dolorem consectetur! Quos, dignissimos quae!</p>
+                    <p style="opacity: 0;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, neque aliquid corrupti recusandae officiis laudantium id? Sequi delectus reiciendis incidunt laboriosam aliquam cum repudiandae esse, eos totam dolorem consectetur! Quos, dignissimos quae!</p>
                 </div>
 
                 <a href="about.html" class="cta">about me</a>
@@ -84,14 +84,14 @@
     <section class="home-projects">
 
         <div class="wrapper">
-            <h1>realized projects</h1>
+            <h1 id="realized-heading" style="transform: translateY(100%); opacity: 0;">realized projects</h1>
         </div>
 
         <div class="grid">
-            <div class="grid__item grid__item--1"></div>
-            <div class="grid__item grid__item--2"></div>
-            <div class="grid__item grid__item--3"></div>
-            <div class="grid__item grid__item--4"></div>
+            <div class="grid__item grid__item--1 home-projects-img" style="opacity: 0;"></div>
+            <div class="grid__item grid__item--2 home-projects-img" style="opacity: 0;"></div>
+            <div class="grid__item grid__item--3 home-projects-img" style="opacity: 0;"></div>
+            <div class="grid__item grid__item--4 home-projects-img" style="opacity: 0;"></div>
         </div>
 
         <div class="wrapper">
@@ -102,11 +102,11 @@
 
     <section class="home-services">
         <div class="wrapper">
-            <h1>services</h1>
+            <h1 id="home-services-heading" style="transform: translateY(100%); opacity: 0;">services</h1>
 
             <div class="container">
 
-                <div class="home-services__item">
+                <div class="home-services__item" style="opacity: 0;">
                     <div class="visible__text">
                         <h3>Full design project</h3>
 
@@ -116,12 +116,12 @@
                         </div>
                     </div>
 
-                    <div class="hidden--text">
+                    <div class="hidden--text" style="opacity: 0;">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae explicabo magnam dicta ex aliquid non enim voluptate architecto quis quasi!</p>
                     </div> 
                 </div>
 
-                <div class="home-services__item">
+                <div class="home-services__item" style="opacity: 0;">
                     <div class="visible__text">
                         <h3>Equipment</h3>
 
@@ -135,7 +135,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae explicabo magnam dicta ex aliquid non enim voluptate architecto quis quasi!</p>
                     </div> 
                 </div>
-                <div class="home-services__item">
+                <div class="home-services__item" style="opacity: 0;">
                     <div class="visible__text">
                         <h3>Dressing</h3>
 
@@ -149,7 +149,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae explicabo magnam dicta ex aliquid non enim voluptate architecto quis quasi!</p>
                     </div> 
                 </div>
-                <div class="home-services__item">
+                <div class="home-services__item" style="opacity: 0;">
                     <div class="visible__text">
                         <h3>Authors supervision</h3>
 
@@ -171,8 +171,8 @@
 
     <section class="instagram">
         <div class="wrapper">
-            <h1>instagram</h1>
-            <a href="#" class="link link--grey">@avawilsondesign</a>
+            <h1 class="instagram-link" style="opacity: 0;">instagram</h1>
+            <a href="#" class="link link--grey instagram-link" style="opacity: 0;">@avawilsondesign</a>
         </div>
         <div class="grid">
             <div class="grid__item">
@@ -200,16 +200,16 @@
 
     <section class="questions">
         <div class="wrapper">
-            <h1>still have questions?</h1>
+            <h1 class="questions-heading" style="transform: translateY(100%); opacity: 0; transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);">still have questions?</h1>
         </div>
 
-        <div class="questions__text">
+        <div class="questions__text questions-text-section">
             <div class="wrapper">
                 <div class="questions__item">
-                    <a href="#" class="link link--white">ava@wilson.com</a>
+                    <a href="#" class="link link--white questions-text" style="opacity: 0;">ava@wilson.com</a>
                 </div>
                 <div class="questions__item">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet tempore eligendi aliquam nihil deleniti voluptatibus quia eius ad, harum quaerat id ex quam molestiae numquam! Odio sint qui corporis. Culpa architecto quia vero repudiandae provident sit sed mollitia, atque consequuntur necessitatibus veritatis?</p>
+                    <p class="questions-text" style="opacity: 0;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet tempore eligendi aliquam nihil deleniti voluptatibus quia eius ad, harum quaerat id ex quam molestiae numquam! Odio sint qui corporis. Culpa architecto quia vero repudiandae provident sit sed mollitia, atque consequuntur necessitatibus veritatis?</p>
                 </div>
             </div>
         </div>
