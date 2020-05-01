@@ -40,7 +40,7 @@ img {
 .wrapper {
   display: flex;
   margin: 0 auto;
-  width: 90%;
+  width: 1140px;
   max-width: 1600px; }
 
 html {
@@ -113,7 +113,7 @@ h6 {
   font-size: 1.8rem;
   margin-bottom: 5rem; }
 
-.home-services h2 {
+.home-services h3 {
   line-height: 0;
   margin-bottom: 2.5rem; }
 
@@ -162,7 +162,8 @@ h6 {
 
 .visible__text:hover ~ .hidden--text {
   height: 20px;
-  opacity: 1; }
+  opacity: 1;
+  margin-top: 2.5rem; }
 
 .link {
   color: #242424;
@@ -275,6 +276,31 @@ p {
 .box__text {
   margin-bottom: 5rem; }
 
+p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgba(36, 36, 36, 0.8);
+  line-height: 1.6; }
+
+.intro-heading {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.47, 0, 0.745, 0.715); }
+
+.intro-text {
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.47, 0, 0.745, 0.715); }
+
+.questions-heading {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.47, 0, 0.745, 0.715); }
+
+.questions-text {
+  opacity: 0;
+  transform: translateY(25%);
+  transition: all 0.5s cubic-bezier(0.47, 0, 0.745, 0.715); }
+
 .cta {
   color: #242424;
   font-size: 1.5rem;
@@ -306,7 +332,6 @@ p {
 
 .footer {
   background-color: #242424;
-  color: #fff;
   padding: 7.5rem 0rem;
   position: sticky;
   bottom: 0%;
@@ -315,7 +340,8 @@ p {
   z-index: -1; }
   .footer p {
     font-size: 1.4rem;
-    font-weight: 400; }
+    font-weight: 400;
+    color: #fff; }
   .footer .wrapper {
     justify-content: space-between;
     align-items: flex-start; }
@@ -398,6 +424,7 @@ input[type="text"] {
   display: grid;
   width: 100%;
   max-width: 1600px;
+  margin: 10rem auto;
   margin: 0 auto; }
 
 .hero .grid {
@@ -454,8 +481,10 @@ input[type="text"] {
 .home-projects .grid {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 7.5rem;
-  margin: 10rem 0rem; }
+  column-gap: 15rem;
+  row-gap: 20rem;
+  margin: 25rem 0rem;
+  width: 100%; }
   @media screen and (max-width: 960px) {
     .home-projects .grid {
       gap: 5rem; } }
@@ -517,7 +546,10 @@ input[type="text"] {
       height: 70rem;
       width: 100%;
       position: relative;
-      cursor: pointer; }
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(50%);
+      transition: all .5s ease-in; }
       @media screen and (max-width: 960px) {
         .projects-grid .grid__item {
           height: 50rem; } }
@@ -594,7 +626,10 @@ input[type="text"] {
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      position: relative; }
+      position: relative;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.5s cubic-bezier(0.47, 0, 0.745, 0.715); }
       @media screen and (max-width: 960px) {
         .services__details .grid__item--bg {
           display: none; } }

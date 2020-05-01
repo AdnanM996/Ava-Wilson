@@ -51,51 +51,66 @@ if(document.body.id === 'home') {
         const homeServicesItems = document.querySelectorAll('.home-services__item');
         const instagram = document.querySelector('.instagram');
         const instagramLinks = document.querySelectorAll('.instagram-link');
-        const questions = document.querySelector('.questions');
-        const questionsHeading = document.querySelector('.questions-heading');
-        const questionsTextSection = document.querySelector('.questions-text-section');
-        const questionsText = document.querySelectorAll('.questions-text');
 
         if(wScroll >= (homeAbout.offsetTop / 2.25)) {
             homeHeading.style.transform = 'translateY(0%)';
-            homeHeading.style.opacity = '1';
-            homeHeading.style.transition = 'all .5s cubic-bezier(1, .04,0, .37)';
+            //homeHeading.style.opacity = '1';
+            homeHeading.style.transition = 'transform .3s linear';
 
             setTimeout(() => {
                 for(let i = 0; i < homeAboutParagraph.length; i++) {
                     homeAboutParagraph[i].style.opacity = '1';
-                    homeAboutParagraph[i].style.transition = 'all .5s cubic-bezier(1, .04,0, .37)';
+                    homeAboutParagraph[i].style.transition = 'all .5s cubic-bezier(0,.69,1,.37)';
                 }
             }, 500);
         } else {
-            homeHeading.style.transform = 'translateY(25%)';
-            homeHeading.style.opacity = '0';
+            homeHeading.style.transform = 'translateY(100%)';
         }
 
-        if(wScroll >= (homeProjects.offsetTop / 1.25)) {
+        if(wScroll >= (homeProjects.offsetTop / 1.5)) {
             realizedHeading.style.transform = 'translateY(0%)';
-            realizedHeading.style.opacity = '1';
-            realizedHeading.style.transition = 'all .7s cubic-bezier(1, .04,0, .37)';
+            realizedHeading.style.transition = 'transform .3s linear';
             
                 for(let i = 0; i < homeProjectsImgs.length; i++) {
                     
                     setTimeout(() => {
+                        homeProjectsImgs[i].style.transform = 'translateY(0%)';
                         homeProjectsImgs[i].style.opacity = '1';
-                        homeProjectsImgs[i].style.transition = 'all .5s cubic-bezier(1, .04,0, .37)';  
-                    }, i * 1000);
+                        homeProjectsImgs[i].style.transition = 'all .6s cubic-bezier(1, .04,0, .37)';  
+                    }, i * 600);
                 }
+        } else {
+            realizedHeading.style.transform = 'translateY(100%)';
+
+            for(let i = 0; i < homeProjectsImgs.length; i++) {
+                    
+                setTimeout(() => {
+                    homeProjectsImgs[i].style.transform = 'translateY(100%)';
+                    homeProjectsImgs[i].style.opacity = '0';
+                      
+                }, i * 600);
+            }
         }
 
         if(wScroll > (homeServices.offsetTop / 1.05)) {
             homeServicesHeading.style.transform = 'translateY(0%)';
             homeServicesHeading.style.opacity = '1';
-            homeServicesHeading.style.transition = 'all .5s cubic-bezier(.17,.67,.83,.67)';
+            homeServicesHeading.style.transition = 'all .3s cubic-bezier(.17,.67,.83,.67)';
 
             for(let i = 0; i < homeServicesItems.length; i++) {
                 setTimeout(() => {
                     homeServicesItems[i].style.opacity = '1';
-                    homeServicesItems[i].style.transition = 'all .5s cubic-bezier(1, .04,0, .37)';  
-                }, i * 500);
+                    homeServicesItems[i].style.transition = 'all .3s linear';  
+                }, i * 300);
+            }
+        } else {
+            homeServicesHeading.style.transform = 'translateY(100%)';
+            homeServicesHeading.style.opacity = '0';
+
+            for(let i = 0; i < homeServicesItems.length; i++) {
+                setTimeout(() => {
+                    homeServicesItems[i].style.opacity = '0'; 
+                }, i * 300);
             }
         }
 
@@ -103,24 +118,34 @@ if(document.body.id === 'home') {
             for(let i = 0; i < instagramLinks.length; i++) {
                 setTimeout(() => {
                     instagramLinks[i].style.opacity = '1';
-                    instagramLinks[i].style.transition = 'all .5s cubic-bezier(1, .04,0, .37)';
-                }, i * 500);
+                    instagramLinks[i].style.transition = 'opacity .3s linear';
+                }, i * 300);
+            }
+        } else {
+            for(let i = 0; i < instagramLinks.length; i++) {
+                setTimeout(() => {
+                    instagramLinks[i].style.opacity = '0';
+                }, i * 300);
             }
         }
 
-        if(wScroll > (questions.offsetTop / 1.05)) {
-            questionsHeading.style.transform = 'translateY(0%)';
-            questionsHeading.style.opacity = '1';
+        /*if(wScroll > (questions.offsetTop / 1.05)) {
+            
+        } else {
+            questionsHeading.style.transform = 'translateY(100%)';
+            questionsHeading.style.opacity = '0';
         }
 
-        if(wScroll > (questionsTextSection.offsetTop / 1.05)) {
+        if(wScroll > (questionsTextSection.offsetTop / 1.08)) {
+            
+        } else {
             for(let i = 0; i < questionsText.length; i++) {
                 setTimeout(() => {
-                    questionsText[i].style.opacity = '1';
-                    questionsText[i].style.transition = 'all .5s cubic-bezier(1, .04,0, .37)';
+                    questionsText[i].style.opacity = '0';
+                    questionsText[i].style.transform = 'translateY(100%)';
                 }, i * 500);
-            }
-        }
+            }    
+        }*/
     });
 
     window.addEventListener('load', () => {
@@ -129,4 +154,108 @@ if(document.body.id === 'home') {
         img.style.transform = 'translateY(0%)';
         img.style.opacity = '1';
     });
+}
+
+function introHeading() {
+    let introH = document.querySelector('.intro-heading');
+
+    introH.style.transform = 'translateY(0%)';
+    introH.style.opacity = '1';
+};
+
+function introText() {
+    let introT = document.querySelector('.intro-text');
+
+    introT.style.opacity = '1';
+    introT.style.transition = 'all 1.2s linear';
+};
+
+let questions = document.querySelector('.questions');
+
+function questionsArea() {
+    const questionsHeading = document.querySelector('.questions-heading');
+
+    questionsHeading.style.transform = 'translateY(0%)';
+    questionsHeading.style.opacity = '1';
+}
+
+let questionsTextSection = document.querySelector('.questions-text-section');
+
+
+function infoAnimations() {
+    const questionsText = document.querySelectorAll('.questions-text');
+
+    for(let i = 0; i < questionsText.length; i++) {
+        setTimeout(() => {
+            questionsText[i].style.opacity = '1';
+            questionsText[i].style.transform = 'translateY(0%)';
+            questionsText[i].style.transition = 'all .5s cubic-bezier(1, .04,0, .37)';
+        }, i * 500);
+    }
+}
+
+if(document.body.id === 'projects') {
+    window.onload = function(){
+        this.introHeading();
+        this.introText();
+    };
+
+    window.addEventListener('scroll', () => {
+        let wScroll = window.pageYOffset;
+
+        const projectsGrid = document.querySelector('.projects-grid');
+        const projectsGridItems = document.querySelectorAll('.projects-grid .grid__item');
+
+        if(wScroll > (projectsGrid.offsetTop / 1.2)) {
+            for(let i = 0; i < projectsGridItems.length; i++) {
+                setInterval(() => {
+                    projectsGridItems[i].style.opacity = '1';
+                    projectsGridItems[i].style.transform = 'translateY(0%)';
+                },500);
+            };
+
+            console.log('tarzan');
+        }
+
+        if(wScroll > (questions.offsetTop / 1.05)) {
+            questionsArea();
+        }
+
+        if(wScroll > (questionsTextSection.offsetTop / 1.2)) {
+            infoAnimations();
+        }
+    });
+
+}
+
+if(document.body.id === 'services') {
+    window.onload = function(){
+        this.introHeading();
+        this.introText();
+    };
+
+    window.addEventListener('scroll', () => {
+        let wScroll = window.pageYOffset;
+
+        const servicesArea = document.querySelector('.services__details');
+        const servicesImgs = document.querySelectorAll('.grid__item--bg');
+
+        if(wScroll > (servicesArea.offsetTop / 1.2)) {
+            for(let i = 0; i < servicesImgs.length; i++){
+                setInterval(() => {
+                    servicesImgs[i].style.opacity = '1';
+                    servicesImgs[i].style.transform = 'scale(1)';
+                }, i * 500);
+            };
+        };
+
+        if(wScroll > (questions.offsetTop / 1.05)) {
+            questionsArea();
+        }
+
+        if(wScroll > (questionsTextSection.offsetTop / 1.2)) {
+            infoAnimations();
+        };
+    });
+
 }

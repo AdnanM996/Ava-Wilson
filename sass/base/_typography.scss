@@ -73,7 +73,7 @@ h6 { font-size: 1em; }
 }
 
 .home-services {
-    & h2 {
+    & h3 {
         line-height: 0;
         margin-bottom: 2.5rem;
     }
@@ -135,6 +135,7 @@ h6 { font-size: 1em; }
 .visible__text:hover ~ .hidden--text{
     height: 20px;
     opacity: 1;
+    margin-top: 2.5rem;
 }
 
 .link {
@@ -293,5 +294,39 @@ p {
 .box {
     &__text {
         margin-bottom: 5rem;
+    }
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgba($dark, .8);
+    line-height: 1.6;
+}
+
+.intro {
+    &-heading {
+        transform: translateY(100%);
+        opacity: 0;
+        transition: all 1s cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+
+    &-text {
+        opacity: 0;
+        transition: all 1.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+}
+
+.questions {
+    &-heading {
+        transform: translateY(100%);
+        opacity: 0;
+        transition: all .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+
+    &-text {
+        opacity: 0;
+        transform: translateY(25%);
+        transition: all .5s cubic-bezier(0.47, 0, 0.745, 0.715)
     }
 }

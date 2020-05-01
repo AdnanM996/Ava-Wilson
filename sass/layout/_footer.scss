@@ -1,6 +1,5 @@
 .footer {
     background-color: $dark;
-    color: $white;
     padding: 7.5rem 0rem;
     position: sticky;
     bottom: 0%;
@@ -11,6 +10,7 @@
     & p {
         font-size: 1.4rem;
         font-weight: 400;
+        color: $white;
     }
 
     & .wrapper {

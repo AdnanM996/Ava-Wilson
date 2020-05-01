@@ -2,7 +2,7 @@
     display: grid;
     width: 100%;
     max-width: 1600px;
-    //margin: 10rem auto;
+    margin: 10rem auto;
     margin: 0 auto;
 }
 
@@ -77,8 +77,10 @@
         & .grid {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, 1fr);
-            gap: 7.5rem;
-            margin: 10rem 0rem;
+            column-gap: 15rem;
+            row-gap: 20rem;
+            margin: 25rem 0rem;
+            width: 100%;
 
             @media screen and(max-width: $media-small) {
                 gap: 5rem;
@@ -171,6 +173,9 @@
             width: 100%;
             position: relative;
             cursor: pointer;
+            opacity: 0;
+            transform: translateY(50%);
+            transition: all .5s ease-in;
 
             @media screen and(max-width: $media-small) {
                 height: 50rem;
@@ -278,6 +283,9 @@
                     background-repeat: no-repeat;
                     background-size: cover;
                     position: relative;
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: all .5s cubic-bezier(0.47, 0, 0.745, 0.715);
 
                     @media screen and(max-width: $media-small) {
                         display: none;
