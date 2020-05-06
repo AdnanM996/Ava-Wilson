@@ -13,5 +13,28 @@
     &__details {
         background-color: $white;
         padding: 10rem 0rem;
+
+        & p {
+            font-size: 1.8rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #353535;
+        }
+
+        & ul {
+            list-style: none;
+            margin-top: 5rem;
+        }
+
+        & li {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #353535;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
     }
 }

@@ -129,23 +129,13 @@ if(document.body.id === 'home') {
             }
         }
 
-        /*if(wScroll > (questions.offsetTop / 1.05)) {
+        if(wScroll > (questions.offsetTop / 1.05)) {
+            questionsArea();
+        };
             
-        } else {
-            questionsHeading.style.transform = 'translateY(100%)';
-            questionsHeading.style.opacity = '0';
-        }
-
         if(wScroll > (questionsTextSection.offsetTop / 1.08)) {
-            
-        } else {
-            for(let i = 0; i < questionsText.length; i++) {
-                setTimeout(() => {
-                    questionsText[i].style.opacity = '0';
-                    questionsText[i].style.transform = 'translateY(100%)';
-                }, i * 500);
-            }    
-        }*/
+            infoAnimations();
+        };
     });
 
     window.addEventListener('load', () => {
@@ -258,4 +248,93 @@ if(document.body.id === 'services') {
         };
     });
 
+}
+
+if(document.body.id === 'about') {
+    window.onload = function(){
+        this.introHeading();
+        this.introText();
+
+        const profileImg = document.querySelector('.profile--img');
+
+        profileImg.style.transform = 'scale(1)';
+    };
+    
+    window.addEventListener('scroll', ()=> {
+        let wScroll = window.pageYOffset;
+
+        if(wScroll > 150) {
+            const boxText = document.querySelector('.about .box p');
+            const boxBtn = document.querySelector('.about .box .cta');
+
+            boxText.style.opacity = '1';
+            boxBtn.style.opacity = '1';
+            boxBtn.style.transform = 'translateY(0%)';
+
+        }
+
+        const workApproach = document.querySelector('.work-approach');
+
+        if(wScroll > (workApproach.offsetTop / 1.2)) {
+            const heading = document.querySelector('.work-approach h1');
+            const list = document.querySelectorAll('.work-approach li');
+
+            heading.style.opacity = '1';
+            heading.style.transform = 'translateY(0%)';
+
+            for(let i = 0; i < list.length; i++) {
+                setTimeout(() => {
+                    list[i].style.opacity = '1';
+                }, i * 300);
+            }
+        }
+
+        if(wScroll > (questions.offsetTop / 1.2)) {
+            questionsArea();
+        }
+
+        if(wScroll > (questionsTextSection.offsetTop / 1.2)) {
+            infoAnimations();
+        };
+    });
+}
+
+if(document.body.id === 'contact') {
+    window.onload = function(){
+        this.introHeading();
+        this.introText();
+    };
+
+    const socialNetworks = document.querySelector('.social-networks');
+
+    window.addEventListener('scroll', () => {
+        let wScroll = window.pageYOffset;
+
+        if(wScroll > (socialNetworks.offsetTop / 2.5)) {
+            const socialNetworksHeading = document.querySelector('.social-networks h4');
+            const socialNetworksLinks = document.querySelectorAll('.social-networks a');
+
+            socialNetworksHeading.style.opacity = '1';
+            socialNetworksHeading.style.transform = 'translateY(0%)';
+
+            for(let i = 0; i < socialNetworksLinks.length; i++) {
+                setTimeout(() => {
+                    socialNetworksLinks[i].style.opacity = '1';
+                }, i * 500);
+            }
+        }
+
+        const contactArea = document.querySelector('.contact-form');
+
+        if(wScroll > (contactArea.offsetTop / 2.5)) {
+            const contactItem = document.querySelectorAll('.contact-form .grid__item');
+
+            for(let i = 0; i < contactItem.length; i++) {
+                setTimeout(() => {
+                    contactItem[i].style.opacity = '1';
+                    contactItem[i].style.transform = 'translateY(0%)';
+                }, i * 500);
+            }
+        }
+    });
 }

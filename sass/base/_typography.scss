@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $font-primary;
     font-weight: 500;
     text-transform: capitalize;
-    line-height: 180%;
+    line-height: 1;
 }
 
 h1, h2 {
@@ -232,7 +232,8 @@ h6 { font-size: 1em; }
 p {
     font-size: 1.8rem;
     font-weight: 300;
-    line-height: 160%;
+    line-height: 1.4;
+    color: #030303;
 }
 
 .big--link {
@@ -292,6 +293,13 @@ p {
 }
 
 .box {
+
+    & p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgba($dark, .8);
+    }
     &__text {
         margin-bottom: 5rem;
     }
