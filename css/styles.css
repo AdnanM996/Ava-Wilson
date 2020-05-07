@@ -1018,6 +1018,9 @@ input[type="text"] {
       .instagram .wrapper {
         flex-direction: column;
         align-items: flex-start; } }
+  @media only screen and (max-width: 468px) {
+    .instagram a {
+      margin-top: 5rem; } }
 
 .questions {
   background-color: #fff;

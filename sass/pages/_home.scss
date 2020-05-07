@@ -79,6 +79,12 @@
             align-items: flex-start;
         } 
     }
+
+    & a {
+        @media only screen and(max-width: $media-small) {
+            margin-top: 5rem;
+        }
+    }
 }
 
 .questions {
