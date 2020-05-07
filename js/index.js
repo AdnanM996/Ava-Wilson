@@ -203,8 +203,6 @@ if(document.body.id === 'projects') {
                     projectsGridItems[i].style.transform = 'translateY(0%)';
                 },500);
             };
-
-            console.log('tarzan');
         }
 
         if(wScroll > (questions.offsetTop / 1.05)) {
@@ -275,7 +273,7 @@ if(document.body.id === 'about') {
 
         const workApproach = document.querySelector('.work-approach');
 
-        if(wScroll > (workApproach.offsetTop / 1.2)) {
+        if(wScroll > (workApproach.offsetTop / 1.5)) {
             const heading = document.querySelector('.work-approach h1');
             const list = document.querySelectorAll('.work-approach li');
 
@@ -289,11 +287,11 @@ if(document.body.id === 'about') {
             }
         }
 
-        if(wScroll > (questions.offsetTop / 1.2)) {
+        if(wScroll > (questions.offsetTop / 1.5)) {
             questionsArea();
         }
 
-        if(wScroll > (questionsTextSection.offsetTop / 1.2)) {
+        if(wScroll > (questionsTextSection.offsetTop / 1.5)) {
             infoAnimations();
         };
     });
@@ -338,3 +336,24 @@ if(document.body.id === 'contact') {
         }
     });
 }
+
+//Mobile navigation
+
+const menu = document.querySelector('.header__menu');
+const nav = document.querySelector('.nav');
+const close = document.querySelector('.close');
+
+function openNav(){
+    menu.addEventListener('click', ()=> {
+        nav.style.transform = 'translateX(0%)';
+    });
+};
+
+function closeNav(){
+    close.addEventListener('click', ()=> {
+        nav.style.transform = 'translateX(200%)';
+    });
+};
+
+openNav();
+closeNav();
